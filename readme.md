@@ -1,27 +1,20 @@
-# Laravel PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Data Product challenge
+MySQL
+Assume the following scenario: There are ads, each belonging to exactly one campaign. A campaign can have multiple ads. Each campaign
+belongs to exactly one advertiser. An advertiser can have multiple campaigns. For the following tasks only the ad's properties are relevant: title,
+text, image, sponsoredBy, trackingUrl
+Please produce the mysql queries to fulfill the following tasks:
+showing all campaigns of advertiser #100 that have more than 50 ads
+showing all campaigns that do not have any ads
+API
+Assume the data structure from the mysql task. Please produce rest-ful API calls for the following actions. For each action provide the URL , HTTP
+method and the request body .
+selecting a specific ad
+selecting all ads of a specific campaign
+selecting all ads of a specific advertiser
+creating an ad
+modifying a specific ad
+PHP
+produce PHP code for a device detector which can classify a device based on its user agent. The detection should be able to classify the device
+at least by its type (tablet, phablet, phone, desktop) and its operating system. Don't reinvent the wheel but use an existing open-source project,
+only code a wrapper project. Provide unit tests to prove the detection is working. For pulling in the dependencies use composer .
