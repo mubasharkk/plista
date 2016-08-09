@@ -27,15 +27,15 @@ Assume the data structure from the mysql task. Please produce rest-ful API calls
 
 - selecting a specific ad
 ```
-http://localhost:8000/get/ad/{ad-id}
+/get/ad/{ad-id}
 ```
 - selecting all ads of a specific campaign
 ```
-http://localhost:8000/get/ads/campaign/{campaign-id}
+/get/campaign/{campaign-id}/ads
 ```
 - selecting all ads of a specific advertiser (Sponsor)
 ```
-http://localhost:8000/get/ads/sponsor/{advertiser-id}
+/get/advertiser/{id}/ads
 ```
 - creating an ad
 - modifying a specific ad
@@ -49,6 +49,5 @@ only code a wrapper project. Provide unit tests to prove the detection is workin
 
 **Browser Agent Detection**
 ```
-http://locahost:8000/device/detect/
-
+/device/detect/
 ```

@@ -51,5 +51,34 @@ class CampaignController extends Controller {
 
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
+    
+    /**
+     * Show campaigns by sponsor
+     * 
+     * @param int $sponsorId Sponsor/Advetiser 
+     * @return Response
+     */
+    function showBySponsor($sponsorId){
+        
+        $sponsorId  = intval($sponsorId);
+        
+        $ads = Campaign::where(array('advertiser_id' => $sponsorId, 'status' => Campaign::STATUS_ACTIVE))
+                        ->with('advertiser')
+                        ->get();
+                            
+        if(is_null($ads)){
+            $data = array(
+                'status' => 'error',
+                'message' => $sponsorId ? 'No result found!' : 'Invalid ID provided'
+            );
+        }else {
+            
+            $data['results']  = $ads->toArray();
+            $data['status']  = 'success';
+        }
+        
+        return response()->json($data, 200 , [], JSON_PRETTY_PRINT);
+        
+    }    
 
 }

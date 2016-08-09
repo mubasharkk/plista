@@ -19,8 +19,8 @@ class CreateAdvertisementTable extends Migration
             $table->mediumText('image_url')->nullable();
             $table->mediumText('tracking_url');
             $table->boolean('status')->default(1);
-            $table->integer('sponsored_by');
-            $table->integer('campaign_id');
+            $table->integer('sponsored_by')->references('id')->on('advertisers');;
+            $table->integer('campaign_id')->references('id')->on('campaigns');
             $table->timestamps();
         });
     }
