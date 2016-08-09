@@ -2,9 +2,9 @@
 
 ## Data Product challenge
 
-# Requires PHP7 + Laravel5
+### Requires PHP7 + Laravel5
 
-# MySQL
+## MySQL
 
 Assume the following scenario: 
 
@@ -21,7 +21,7 @@ Please produce the mysql queries to fulfill the following tasks:
 **SQL files can be found in:**
 > db-files/task-1.sql
 
-# API
+## API
 
 Assume the data structure from the mysql task. Please produce rest-ful API calls for the following actions. For each action provide the URL , HTTP method and the request body .
 
@@ -41,7 +41,7 @@ http://localhost:8000/get/ads/sponsor/{advertiser-id}
 - modifying a specific ad
 
 
-# PHP
+## PHP
 
 produce PHP code for a device detector which can classify a device based on its user agent. The detection should be able to classify the device
 at least by its type (tablet, phablet, phone, desktop) and its operating system. Don't reinvent the wheel but use an existing open-source project,
