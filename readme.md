@@ -19,6 +19,8 @@ Please produce the mysql queries to fulfill the following tasks:
 - showing all campaigns that do not have any ads 
 
 **SQL files can be found in:**
+> db-files/db-schema.sql
+> db-files/db-data-import.sql
 > db-files/task-1.sql
 
 ## API
