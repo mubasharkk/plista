@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class CampaignController extends Controller {
 
+    /**
+     * Show all campaigns
+     * @return Response
+     */
     function index() {
 
         $campaigns = Campaign::with('advertiser')->where(array('status' => Campaign::STATUS_ACTIVE))
@@ -29,7 +33,8 @@ class CampaignController extends Controller {
 
         $id = intval($id);
 
-        $campaign = Campaign::with('advertiser')->where(array('id' => $id))
+        $campaign = Campaign::with('advertiser')
+                ->where(array('id' => $id))
                 ->first(array('id', 'title', 'created_at', 'advertiser_id'));
 
         if (is_null($campaign)) {
@@ -40,7 +45,7 @@ class CampaignController extends Controller {
         } else {
 
             $data['results'] = $campaign->toArray();
-            $data['results']['ads_count'] = 0;
+            $data['results']['ads_count'] = $campaign->advertisement->count();
             $data['status'] = 'success';
         }
 

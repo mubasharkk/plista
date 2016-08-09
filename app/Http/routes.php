@@ -26,3 +26,6 @@ Route::resource('campaigns', 'CampaignController',
 
 Route::resource('campaign', 'CampaignController', 
         ['except' => ['index']]);
+
+Route::get('get/ad/{id}', 'AdsController@index');
+

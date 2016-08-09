@@ -45,5 +45,8 @@ class Campaign extends Model {
         return $this->belongsTo('App\Advertiser', 'advertiser_id');
     }
     
-
+    function advertisement() {
+        return $this->hasMany('App\Advertisement', 'campaign_id');
+    }
+    
 }
