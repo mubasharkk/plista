@@ -34,8 +34,8 @@ at least by its type (tablet, phablet, phone, desktop) and its operating system.
 only code a wrapper project. Provide unit tests to prove the detection is working. For pulling in the dependencies use composer .
 
 **Browser Agent Detection**
-...
+```
 
 http://locahost:8000/device/detect/
 
-...
+```
