@@ -156,7 +156,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         
+        /**
+         * User Agent Detector
+         */
         Lsxiao\UserAgent\UserAgentServiceProvider::class,
+        
+        /**
+         * HTML / Form Parser for Blade
+         */
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -204,6 +212,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'UA' => Lsxiao\UserAgent\Facades\UserAgent::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        
     ],
 
 ];

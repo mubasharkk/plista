@@ -47,5 +47,9 @@ Route::get('get/ad/{id}', 'AdsController@index');
 Route::resource('ads', 'AdsController',
                 ['except' => ['index','show']]);
 
+// Ads by id
+Route::get('get/ad/{id}/tracker', 'AdsController@tracker');
+
+
 Route::get('device/detect', 'DeviceController@index');
 

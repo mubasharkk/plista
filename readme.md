@@ -37,8 +37,29 @@ Assume the data structure from the mysql task. Please produce rest-ful API calls
 ```
 /get/advertiser/{id}/ads
 ```
-- creating an ad
+- creating an ad 
+```
+**POST** /ads/
+
+title:Funny Advertise
+text:eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, 
+image_url:http://gmail.com
+campaign_id:519
+sponsored_by:48
+
+```
 - modifying a specific ad
+
+```
+**PUT** /ads/{id}
+
+title:Funny Advertise
+text:eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, 
+image_url:http://gmail.com
+campaign_id:519
+sponsored_by:48
+
+```
 
 
 ## PHP

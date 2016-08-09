@@ -8,7 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "jenssegers/agent": "^2.3",
-        "lsxiao/user-agent-for-laravel5": "^1.0"
+        "lsxiao/user-agent-for-laravel5": "^1.0",
+        "twbs/bootstrap": "^3.3",
+        "laravelcollective/html": "~5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
