@@ -39,7 +39,7 @@ Assume the data structure from the mysql task. Please produce rest-ful API calls
 ```
 - creating an ad 
 ```
-**POST** /ads/
+[POST] /ads/
 
 title:Funny Advertise
 text:eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, 
@@ -51,13 +51,13 @@ sponsored_by:48
 - modifying a specific ad
 
 ```
-**PUT** /ads/{id}
+[PUT] /ads/{id}
 
-title:Funny Advertise
+title:Funny Advertise Updated Title
 text:eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, 
 image_url:http://gmail.com
 campaign_id:519
-sponsored_by:48
+sponsored_by:95
 
 ```
 
