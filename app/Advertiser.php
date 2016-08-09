@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Advertiser extends Model
 {
+    
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
+        
+    /**
+     * Row status 
+     * @var boolean
+     */
+    protected $status;
             
     /**
      * Table Name
@@ -35,4 +44,8 @@ class Advertiser extends Model
         $this->realname = $name;
     }
 
+    function campaigns() {
+        return $this->hasMany('App\Campaign', 'advertiser_id');
+    }
+    
 }

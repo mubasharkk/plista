@@ -15,5 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('advertiser', 'AdvertiserController');
+Route::resource('advertisers', 'AdvertiserController',
+                ['only' => ['index']]);
 
+Route::resource('advertiser', 'AdvertiserController', 
+        ['except' => ['index']]);
+
+Route::resource('campaigns', 'CampaignController',
+                ['only' => ['index']]);
+
+Route::resource('advertiser', 'AdvertiserController', 
+        ['except' => ['index']]);
