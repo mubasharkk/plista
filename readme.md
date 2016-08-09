@@ -16,6 +16,9 @@ Please produce the mysql queries to fulfill the following tasks:
 - showing all campaigns of advertiser #100 that have more than 50 ads
 - showing all campaigns that do not have any ads 
 
+**SQL files can be found in:**
+> db-files/task-1.sql
+
 # API
 
 Assume the data structure from the mysql task. Please produce rest-ful API calls for the following actions. For each action provide the URL , HTTP method and the request body .
@@ -35,7 +38,6 @@ only code a wrapper project. Provide unit tests to prove the detection is workin
 
 **Browser Agent Detection**
 ```
-
 http://locahost:8000/device/detect/
 
 ```
