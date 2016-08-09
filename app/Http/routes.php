@@ -29,6 +29,10 @@ Route::resource('campaign', 'CampaignController',
 
 Route::get('get/ad/{id}', 'AdsController@index');
 Route::get('get/ads/sponsor/{id}', 'AdsController@showBySponsor');
+Route::get('get/ads/campaign/{id}', 'AdsController@showByCampaign');
+
+Route::resource('campaign', 'CampaignController', 
+        ['except' => ['index', 'showBySponsor', 'showByCampaign']]);
 
 Route::get('device/detect', 'DeviceController@index');
 

@@ -34,9 +34,9 @@ class AdsController extends Controller
     }
     
     /**
-     * Show advertiser to the data
+     * Show advertisements by sponsor
      * 
-     * @param int $id
+     * @param int $sponsorId Sponsor/Advetiser 
      * @return Response
      */
     function showBySponsor($sponsorId){
@@ -55,7 +55,34 @@ class AdsController extends Controller
         }else {
             
             $data['results']  = $ads->toArray();
-//            $data['results']['campaigns'] = $advertiser->campaigns->count();
+            $data['status']  = 'success';
+        }
+        
+        return response()->json($data, 200 , [], JSON_PRETTY_PRINT);
+        
+    }
+    /**
+     * Show advertisements by sponsor
+     * 
+     * @param int $id
+     * @return Response
+     */
+    function showByCampaign($campaignId){
+        
+        $campaignId  = intval($campaignId);
+        
+        $ads = Advertisement::where(array('campaign_id' => $campaignId))
+                        ->with('campaign')
+                        ->get();
+                            
+        if(is_null($ads)){
+            $data = array(
+                'status' => 'error',
+                'message' => $sponsorId ? 'No result found!' : 'Invalid ID provided'
+            );
+        }else {
+            
+            $data['results']  = $ads->toArray();
             $data['status']  = 'success';
         }
         

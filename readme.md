@@ -2,6 +2,8 @@
 
 ## Data Product challenge
 
+# Requires PHP7 + Laravel5
+
 # MySQL
 
 Assume the following scenario: 
@@ -24,8 +26,17 @@ Please produce the mysql queries to fulfill the following tasks:
 Assume the data structure from the mysql task. Please produce rest-ful API calls for the following actions. For each action provide the URL , HTTP method and the request body .
 
 - selecting a specific ad
+```
+http://localhost:8000/get/ad/{ad-id}
+```
 - selecting all ads of a specific campaign
-- selecting all ads of a specific advertiser
+```
+http://localhost:8000/get/ads/campaign/{campaign-id}
+```
+- selecting all ads of a specific advertiser (Sponsor)
+```
+http://localhost:8000/get/ads/sponsor/{advertiser-id}
+```
 - creating an ad
 - modifying a specific ad
 
