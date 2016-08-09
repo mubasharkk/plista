@@ -24,5 +24,5 @@ Route::resource('advertiser', 'AdvertiserController',
 Route::resource('campaigns', 'CampaignController',
                 ['only' => ['index']]);
 
-Route::resource('advertiser', 'AdvertiserController', 
+Route::resource('campaign', 'CampaignController', 
         ['except' => ['index']]);

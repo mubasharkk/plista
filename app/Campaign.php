@@ -38,11 +38,11 @@ class Campaign extends Model {
      *
      * @var array
      */
-    protected $hidden = ['created_at', 'updated_at'];    
+//    protected $hidden = ['created_at', 'updated_at'];    
     
     
     function advertiser() {
-        return $this->belongsTo('App\Advertiser', 'id');
+        return $this->belongsTo('App\Advertiser', 'advertiser_id');
     }
     
 

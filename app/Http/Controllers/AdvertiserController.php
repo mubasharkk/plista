@@ -45,7 +45,7 @@ class AdvertiserController extends Controller {
         }else {
             
             $data['results']  = $advertiser->toArray();
-            $data['results']['campaigns'] = $advertiser->campaigns;
+            $data['results']['campaigns'] = $advertiser->campaigns->count();
             $data['status']  = 'success';
         }
         
