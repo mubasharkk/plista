@@ -20,7 +20,9 @@ Please produce the mysql queries to fulfill the following tasks:
 
 **SQL files can be found in:**
 > db-files/db-schema.sql
+
 > db-files/db-data-import.sql
+
 > db-files/task-1.sql
 
 ## API
