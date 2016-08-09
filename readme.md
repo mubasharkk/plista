@@ -35,7 +35,7 @@ Assume the data structure from the mysql task. Please produce rest-ful API calls
 ```
 - selecting all ads of a specific advertiser (Sponsor)
 ```
-/get/advertiser/{id}/ads
+/get/advertiser/{advertiser-id}/ads
 ```
 - creating an ad 
 ```
@@ -51,7 +51,7 @@ sponsored_by:48
 - modifying a specific ad
 
 ```
-[PUT] /ads/{id}
+[PUT] /ads/{ad-id}
 
 title:Funny Advertise Updated Title
 text:eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, 
@@ -72,3 +72,12 @@ only code a wrapper project. Provide unit tests to prove the detection is workin
 ```
 /device/detect/
 ```
+
+### Unit test for browser detection
+
+> tests/DeviceDetectTest.php
+
+```
+./vendor/bin/phpunit
+```
+> https://deviceatlas.com/blog/list-of-user-agent-strings

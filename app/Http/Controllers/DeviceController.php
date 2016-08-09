@@ -10,9 +10,9 @@ use WhichBrowser\Parser;
 
 class DeviceController extends Controller {
 
-    function index() {
+    function index(Request $request) {
         
-        $agent = new Parser($_SERVER['HTTP_USER_AGENT']);
+        $agent = new Parser($request->server('HTTP_USER_AGENT'));
         
         $data = array(
             'browser' => $agent->browser->toString(),
@@ -22,7 +22,7 @@ class DeviceController extends Controller {
             'isTablet' => $agent->isType('tablet'),
             'isRobot' => $agent->isType('bot'),
             'isEreader' => $agent->isType('ereader'),
-            'isDesktop' => $agent->isType('monitor'),
+//            'isDesktop' => $agent->isType('monitor'),
             'isPos' => $agent->isType('pos'),
             'isGaming' => $agent->isType('gaming'),
             'isEmulator' => $agent->isType('emulator'),
