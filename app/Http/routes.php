@@ -29,3 +29,5 @@ Route::resource('campaign', 'CampaignController',
 
 Route::get('get/ad/{id}', 'AdsController@index');
 
+Route::get('device/detect', 'DeviceController@index');
+
